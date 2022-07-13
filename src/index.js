@@ -2,10 +2,13 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 const handlebars = require('express-handlebars');
-const route = require('./router');
 
+const route = require('./router');
 const app = express();
 const port = 3000;
+const db = require('./config/db');
+
+db.connect();
 
 app.use(morgan('combined'));
 
