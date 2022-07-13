@@ -20,7 +20,8 @@ class SiteController {
 
   // [get] /search
   search(req, res) {
-    res.render('search');
+    console.log(res, req);
+    res.send('news');
   }
 }
 
